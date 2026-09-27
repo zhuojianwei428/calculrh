@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://calculrh.com/sitemap.xml
+Sitemap: https://www.calculrh.com/sitemap.xml
