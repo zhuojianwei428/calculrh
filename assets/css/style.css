@@ -161,12 +161,14 @@ img { max-width: 100%; }
 .hook p { margin: 0; font-size: 14.5px; color: var(--brand-dark); font-weight: 600; }
 .hook .btn { background: var(--brand); color: #fff; padding: 10px 16px; border-radius: 8px; font-weight: 700; font-size: 14px; }
 .hook .btn:hover { background: var(--brand-dark); text-decoration: none; }
+.hook-note { width: 100%; font-size: 12px; color: var(--muted); margin-top: 2px; }
 
 /* ---------- Footer ---------- */
 .site-footer { border-top: 1px solid var(--line); background: var(--surface); margin-top: 40px; }
 .site-footer .inner { max-width: var(--maxw); margin: 0 auto; padding: 22px 20px; font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 10px 22px; justify-content: space-between; }
 .site-footer a { color: var(--muted); }
 .site-footer .disc { width: 100%; font-size: 12px; color: #8a94a0; line-height: 1.5; }
+.site-footer .trust { width: 100%; font-size: 12.5px; color: var(--green); font-weight: 600; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 720px) {
