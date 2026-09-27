@@ -61,7 +61,7 @@ img { max-width: 100%; }
 }
 .brand { font-weight: 800; font-size: 18px; color: var(--ink); display: flex; align-items: center; gap: 8px; }
 .brand:hover { text-decoration: none; }
-.brand .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--brand); display: inline-block; }
+.brand .logo { width: 28px; height: 28px; flex: 0 0 auto; display: block; }
 .brand small { font-weight: 500; color: var(--muted); font-size: 12px; }
 .nav { display: flex; gap: 4px; align-items: center; }
 .nav a {
