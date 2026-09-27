@@ -1,0 +1,16 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/calculateurs/congres-payes-assmat", "destination": "/calculateur-conges-payes-assistante-maternelle", "permanent": true },
+    { "source": "/calculateurs/congres-payes-assmat.html", "destination": "/calculateur-conges-payes-assistante-maternelle", "permanent": true },
+    { "source": "/calculateurs/indemnite-fin-de-contrat-assmat", "destination": "/calculateur-indemnite-fin-de-contrat-assistante-maternelle", "permanent": true },
+    { "source": "/calculateurs/indemnite-fin-de-contrat-assmat.html", "destination": "/calculateur-indemnite-fin-de-contrat-assistante-maternelle", "permanent": true },
+    { "source": "/calculateurs/salaire-net-assmat", "destination": "/calculateur-salaire-net-assistante-maternelle", "permanent": true },
+    { "source": "/calculateurs/salaire-net-assmat.html", "destination": "/calculateur-salaire-net-assistante-maternelle", "permanent": true },
+    { "source": "/calculateurs/jours-cp-acquis", "destination": "/calculateur-jours-conges-payes-acquis", "permanent": true },
+    { "source": "/calculateurs/jours-cp-acquis.html", "destination": "/calculateur-jours-conges-payes-acquis", "permanent": true },
+    { "source": "/guides/comment-calculer-cp-nounou", "destination": "/guide-comment-calculer-conges-payes-nounou", "permanent": true },
+    { "source": "/guides/comment-calculer-cp-nounou.html", "destination": "/guide-comment-calculer-conges-payes-nounou", "permanent": true }
+  ]
+}
