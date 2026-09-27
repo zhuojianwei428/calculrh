@@ -1,0 +1,186 @@
+/* ==========================================================================
+   法国 HR 计算器站 — 设计系统 (clean / light / mobile-first / 零依赖)
+   定位: particulier employeur (雇保姆家庭) 的免费、透明、可核验计算器
+   ========================================================================== */
+
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --ink: #1f2933;
+  --ink-soft: #485563;
+  --muted: #66727f;
+  --line: #e3e7ec;
+  --line-soft: #eef1f4;
+  --brand: #0b66c3;       /* 法国蓝 */
+  --brand-dark: #094f97;
+  --brand-soft: #e8f1fb;
+  --green: #1a7f37;        /* 准确/正向 */
+  --green-soft: #e7f4ea;
+  --amber: #b7791f;
+  --amber-soft: #fbf3e3;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 1px 3px rgba(16,24,40,.06), 0 1px 2px rgba(16,24,40,.04);
+  --maxw: 960px;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+a { color: var(--brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img { max-width: 100%; }
+
+/* ---------- Layout ---------- */
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px 64px; }
+
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: 12px; top: 12px; background: #fff; padding: 8px 12px; border-radius: 8px; box-shadow: var(--shadow); z-index: 50; }
+
+/* ---------- Header ---------- */
+.site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  position: sticky; top: 0; z-index: 30;
+}
+.site-header .bar {
+  max-width: var(--maxw); margin: 0 auto; padding: 12px 20px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+.brand { font-weight: 800; font-size: 18px; color: var(--ink); display: flex; align-items: center; gap: 8px; }
+.brand:hover { text-decoration: none; }
+.brand .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--brand); display: inline-block; }
+.brand small { font-weight: 500; color: var(--muted); font-size: 12px; }
+.nav { display: flex; gap: 4px; align-items: center; }
+.nav a {
+  color: var(--ink-soft); font-size: 14px; padding: 7px 11px; border-radius: 8px; font-weight: 600;
+}
+.nav a:hover { background: var(--line-soft); text-decoration: none; }
+.nav-toggle { display: none; }
+
+/* ---------- Hero ---------- */
+.hero { padding: 38px 0 10px; }
+.hero h1 { font-size: 30px; line-height: 1.2; margin: 0 0 10px; letter-spacing: -.4px; }
+.hero p.lead { font-size: 17px; color: var(--ink-soft); margin: 0 0 18px; max-width: 640px; }
+.badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+.badge {
+  display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 600;
+  padding: 5px 11px; border-radius: 999px; background: var(--green-soft); color: var(--green);
+  border: 1px solid #cfe9d6;
+}
+.badge.blue { background: var(--brand-soft); color: var(--brand-dark); border-color: #cfe2f6; }
+.badge.amber { background: var(--amber-soft); color: var(--amber); border-color: #f0e0bf; }
+
+/* ---------- Cards / Grid ---------- */
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); margin-top: 18px; }
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 18px; box-shadow: var(--shadow); transition: transform .12s ease, border-color .12s ease;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.card:hover { transform: translateY(-2px); border-color: #cdd6e0; text-decoration: none; }
+.card .ic { font-size: 22px; }
+.card h3 { margin: 2px 0; font-size: 16.5px; color: var(--ink); }
+.card p { margin: 0; color: var(--muted); font-size: 13.5px; }
+.card .go { margin-top: auto; padding-top: 8px; font-weight: 700; color: var(--brand); font-size: 14px; }
+
+.section-title { font-size: 20px; margin: 34px 0 4px; }
+.section-sub { color: var(--muted); font-size: 14px; margin: 0 0 4px; }
+
+/* ---------- Calculator (real tool) ---------- */
+.calc {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow); overflow: hidden; margin-top: 18px;
+}
+.calc-head { padding: 16px 18px; border-bottom: 1px solid var(--line-soft); display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; }
+.calc-head h2 { margin: 0; font-size: 18px; }
+.calc-body { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.calc-inputs { padding: 18px; border-right: 1px solid var(--line-soft); }
+.calc-result { padding: 18px; background: #fafbfc; }
+
+.field { margin-bottom: 14px; }
+.field label { display: block; font-size: 13.5px; font-weight: 600; color: var(--ink-soft); margin-bottom: 5px; }
+.field .hint { font-weight: 400; color: var(--muted); font-size: 12px; }
+.field input, .field select {
+  width: 100%; padding: 10px 12px; font-size: 15px; border: 1px solid var(--line);
+  border-radius: var(--radius-sm); background: #fff; color: var(--ink); font-family: var(--font);
+}
+.field input:focus, .field select:focus { outline: 2px solid var(--brand-soft); border-color: var(--brand); }
+.field .unit { color: var(--muted); font-size: 12.5px; margin-left: 4px; }
+
+.mode-toggle { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; background: #fff; }
+.mode-toggle button {
+  border: 0; background: #fff; padding: 7px 14px; font-size: 13px; font-weight: 600; color: var(--ink-soft); cursor: pointer; font-family: var(--font);
+}
+.mode-toggle button.active { background: var(--brand); color: #fff; }
+
+.result-big { font-size: 34px; font-weight: 800; color: var(--green); line-height: 1.1; }
+.result-big .small { font-size: 15px; color: var(--muted); font-weight: 600; }
+.result-line { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px dashed var(--line-soft); font-size: 14px; }
+.result-line:last-child { border-bottom: 0; }
+.result-line b { color: var(--ink); }
+.result-empty { color: var(--muted); font-size: 14px; }
+
+.disclaimer {
+  margin-top: 14px; font-size: 12.5px; color: var(--muted); background: var(--amber-soft);
+  border: 1px solid #f0e0bf; border-radius: var(--radius-sm); padding: 10px 12px;
+}
+.disclaimer b { color: var(--amber); }
+
+/* ---------- Formula / legal panel ---------- */
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px 20px; margin-top: 18px; }
+.panel h2 { margin-top: 0; font-size: 18px; }
+.formula { background: #f3f6fa; border: 1px solid #e1e8f0; border-radius: 8px; padding: 12px 14px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13.5px; color: #243b53; overflow-x: auto; }
+.legal-ref { font-size: 13px; color: var(--ink-soft); }
+.legal-ref a { font-weight: 600; }
+.updated { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 600; color: var(--green); background: var(--green-soft); border: 1px solid #cfe9d6; border-radius: 999px; padding: 4px 10px; }
+
+/* ---------- FAQ ---------- */
+.faq details { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 4px 14px; margin: 8px 0; }
+.faq summary { cursor: pointer; font-weight: 600; font-size: 15px; padding: 10px 0; }
+.faq details p { margin: 0 0 12px; color: var(--ink-soft); font-size: 14px; }
+
+/* ---------- Breadcrumb ---------- */
+.crumbs { font-size: 13px; color: var(--muted); padding: 14px 0 0; }
+.crumbs a { color: var(--muted); }
+
+/* ---------- Callout (email hook placeholder) ---------- */
+.hook { background: var(--brand-soft); border: 1px solid #cfe2f6; border-radius: var(--radius); padding: 16px 18px; margin-top: 18px; display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between; }
+.hook p { margin: 0; font-size: 14.5px; color: var(--brand-dark); font-weight: 600; }
+.hook .btn { background: var(--brand); color: #fff; padding: 10px 16px; border-radius: 8px; font-weight: 700; font-size: 14px; }
+.hook .btn:hover { background: var(--brand-dark); text-decoration: none; }
+
+/* ---------- Footer ---------- */
+.site-footer { border-top: 1px solid var(--line); background: var(--surface); margin-top: 40px; }
+.site-footer .inner { max-width: var(--maxw); margin: 0 auto; padding: 22px 20px; font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 10px 22px; justify-content: space-between; }
+.site-footer a { color: var(--muted); }
+.site-footer .disc { width: 100%; font-size: 12px; color: #8a94a0; line-height: 1.5; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 720px) {
+  .calc-body { grid-template-columns: 1fr; }
+  .calc-inputs { border-right: 0; border-bottom: 1px solid var(--line-soft); }
+  .hero h1 { font-size: 25px; }
+  .nav { display: none; position: absolute; top: 56px; right: 12px; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 8px; box-shadow: var(--shadow); }
+  .nav.open { display: flex; }
+  .nav-toggle { display: inline-flex; border: 1px solid var(--line); background: #fff; border-radius: 8px; padding: 7px 10px; font-size: 18px; cursor: pointer; }
+}
+
+/* ---------- Print (结果可导出) ---------- */
+@media print {
+  .site-header, .nav, .hero .badges, .hook, .site-footer .disc, .calc-inputs { display: none; }
+  body { background: #fff; }
+  .calc-result { background: #fff; }
+}

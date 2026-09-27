@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculateur congés payés assistante maternelle (nounou) — gratuit</title>
+  <meta name="description" content="Calculez les jours de congés payés acquis et l'indemnité d'une assistante maternelle : 2,5 j par mois (plafond 30 j), bonus de fractionnement et méthode 1/10. Formule et article du Code du travail affichés.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="canonical" href="https://calculrh.com/calculateurs/congres-payes-assmat">
+</head>
+<body>
+  <a class="skip" href="#main">Aller au contenu</a>
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="../index.html"><span class="dot"></span> CalculRH&nbsp;Famille <small>pour particulier employeur</small></a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <nav class="nav">
+        <a href="../index.html">Accueil</a>
+        <a href="../index.html#calculateurs">Calculateurs</a>
+        <a href="../guides/comment-calculer-cp-nounou.html">Guides</a>
+        <a href="../mentions-legales.html">Mentions légales</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <nav class="crumbs"><a href="../index.html">Accueil</a> › <a href="../index.html#calculateurs">Calculateurs</a> › Congés payés assistante maternelle</nav>
+
+    <section class="hero">
+      <div class="badges">
+        <span class="badge">✓ Temps plein &amp; partiel</span>
+        <span class="badge blue">✓ Base légale citée</span>
+        <span class="badge amber">Mis à jour 2026-09</span>
+      </div>
+      <h1>Calculateur de congés payés — assistante maternelle</h1>
+      <p class="lead">Jours acquis selon la règle des 2,5 jours par mois (plafond 30 jours), identique en temps plein et temps partiel, plus le bonus de fractionnement et l'indemnité de congés payés.</p>
+    </section>
+
+    <div class="calc">
+      <div class="calc-head">
+        <h2>📅 Simulateur congés payés (assmat)</h2>
+      </div>
+      <div class="calc-body">
+        <div class="calc-inputs">
+          <div class="field">
+            <label for="cp_mois">Mois travaillés <span class="hint">sur la période de référence (1 juin → 31 mai)</span></label>
+            <input id="cp_mois" type="number" min="0" max="12" step="0.5" placeholder="ex. 10" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="cp_brut">Rémunération brute totale <span class="hint">sur la période (pour l'indemnité 1/10)</span></label>
+            <input id="cp_brut" type="number" min="0" step="0.01" placeholder="ex. 12000" inputmode="decimal"><span class="unit">€</span>
+          </div>
+          <div class="field">
+            <label for="cp_hors"><input id="cp_hors" type="checkbox" style="width:auto;margin-right:8px"> Des congés pris hors période principale ?</label>
+            <span class="hint">Hors 1ᵉʳ mai → 31 octobre : +1 jour (3 à 5 j pris) ou +2 jours (6 j et plus).</span>
+            <div id="cp_hors_row" style="display:none">
+              <label for="cp_hors" style="margin-top:8px">Jours de CP pris hors période principale</label>
+              <input id="cp_hors_n" type="number" min="0" step="1" placeholder="ex. 4" inputmode="decimal"><span class="unit">j</span>
+            </div>
+          </div>
+        </div>
+        <div class="calc-result">
+          <div id="cp_out"><p class="result-empty">Saisissez le nombre de mois travaillés.</p></div>
+          <div class="disclaimer"><b>Info :</b> calcul indicatif basé sur le droit commun. L'indemnité réelle peut suivre la méthode de maintien de salaire (art. L3141-22). Vérifiez auprès de Pajemploi.</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="panel">
+      <h2>Comment ça se calcule</h2>
+      <p><b>Jours acquis</b> — 2,5 jours ouvrables par mois travaillé, plafond 30 jours (5 semaines) par période de référence. Identique en temps plein et temps partiel (art. L3123-5) :</p>
+      <div class="formula">Jours_CP = min( 2,5 × mois_travaillés , 30 )   — art. L3141-1 / L3141-3</div>
+      <p><b>Jours de fractionnement (bonus)</b> — si des congés sont pris en dehors de la période principale (1ᵉʳ mai → 31 octobre) : +1 jour pour 3 à 5 jours pris, +2 jours pour 6 jours et plus :</p>
+      <div class="formula">Bonus = +1 j (3–5 j hors période)  ou  +2 j (≥ 6 j)   — art. L3141-13</div>
+      <p><b>Indemnité de congés payés</b> — méthode simplifiée 1/10 de la rémunération brute totale de la période (la méthode du maintien de salaire s'applique si plus favorable) :</p>
+      <div class="formula">Indemnité = rémunération_brute_totale ÷ 10   — art. L3141-22 / L3141-24</div>
+      <p class="legal-ref">Sources : <a href="https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000006150381/" target="_blank" rel="noopener">L3141-1</a> · <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032692771/" target="_blank" rel="noopener">L3141-22</a> · <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006150381/" target="_blank" rel="noopener">L3141-13</a></p>
+    </section>
+
+    <section class="faq">
+      <h2 class="section-title">Questions fréquentes</h2>
+      <details open><summary>Combien de congés payés pour une nounou à temps plein ?</summary><p>2,5 jours ouvrables par mois travaillé, dans la limite de 30 jours pour la période de référence (1 juin au 31 mai). Exemple : 10 mois travaillés = 25 jours.</p></details>
+      <details><summary>Comment calculer en temps partiel ?</summary><p>L'acquisition est identique au temps plein : 2,5 jours par mois (art. L3123-5). Le bonus de fractionnement s'ajoute si des congés sont pris hors période principale (1ᵉʳ mai → 31 octobre).</p></details>
+      <details><summary>L'indemnité de congés payés est-elle imposable ?</summary><p>L'indemnité de congés payés est soumise à cotisations et à l'impôt sur le revenu comme le salaire, sauf cas particuliers. Vérifiez auprès de votre centre des finances publiques.</p></details>
+    </section>
+
+    <div class="hook">
+      <p>📩 Bulletin de paie nounou (PDF) à remettre à chaque paie — modèle gratuit.</p>
+      <a class="btn" href="../guides/comment-calculer-cp-nounou.html#pdf">Recevoir le modèle</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <span>© <span id="y">2026</span> CalculRH Famille</span>
+      <span><a href="../mentions-legales.html">Mentions légales</a> · <a href="../guides/comment-calculer-cp-nounou.html">Guide CP nounou</a></span>
+      <span class="disc">Outil d'information gratuit — résultats indicatifs, non conseil juridique. Les taux et méthodes doivent être confirmés auprès de Pajemploi / Urssaf avant utilisation réelle.</span>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Combien de congés payés pour une nounou à temps plein ?","acceptedAnswer":{"@type":"Answer","text":"2,5 jours ouvrables par mois travaillé, dans la limite de 30 jours pour la période de référence (1 juin au 31 mai)."}},
+      {"@type":"Question","name":"Comment calculer en temps partiel ?","acceptedAnswer":{"@type":"Answer","text":"L'acquisition est identique au temps plein : 2,5 jours par mois (art. L3123-5). Le bonus de fractionnement s'ajoute si des congés sont pris hors période principale."}},
+      {"@type":"Question","name":"L'indemnité de congés payés est-elle imposable ?","acceptedAnswer":{"@type":"Answer","text":"Elle est en principe soumise à cotisations et à l'impôt sur le revenu comme le salaire, sous réserve de cas particuliers."}}
+    ]
+  }
+  </script>
+  <script src="../assets/js/calc.js"></script>
+</body>
+</html>

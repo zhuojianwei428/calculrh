@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculateur salaire net assistante maternelle — brut vers net et coût employeur</title>
+  <meta name="description" content="Estimation du salaire net et du coût employeur d'une assistante maternelle à domicile. Taux de cotisations affichés et modifiables. Outil gratuit et transparent.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="canonical" href="https://calculrh.com/calculateurs/salaire-net-assmat">
+</head>
+<body>
+  <a class="skip" href="#main">Aller au contenu</a>
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="../index.html"><span class="dot"></span> CalculRH&nbsp;Famille <small>pour particulier employeur</small></a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <nav class="nav">
+        <a href="../index.html">Accueil</a>
+        <a href="../index.html#calculateurs">Calculateurs</a>
+        <a href="../guides/comment-calculer-cp-nounou.html">Guides</a>
+        <a href="../mentions-legales.html">Mentions légales</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <nav class="crumbs"><a href="../index.html">Accueil</a> › <a href="../index.html#calculateurs">Calculateurs</a> › Salaire net</nav>
+
+    <section class="hero">
+      <div class="badges">
+        <span class="badge">✓ Taux modifiables</span>
+        <span class="badge blue">✓ Net + coût employeur</span>
+        <span class="badge amber">Mis à jour 2026-09</span>
+      </div>
+      <h1>Calculateur de salaire net — assistante maternelle</h1>
+      <p class="lead">Estimation du salaire net à payer et du coût employeur, à partir du brut. Les taux de cotisations sont affichés et modifiables.</p>
+    </section>
+
+    <div class="calc">
+      <div class="calc-head"><h2>🧮 Salaire net (assmat)</h2></div>
+      <div class="calc-body">
+        <div class="calc-inputs">
+          <div class="field">
+            <label for="sn_brut">Salaire brut</label>
+            <input id="sn_brut" type="number" min="0" step="0.01" placeholder="ex. 1500" inputmode="decimal"><span class="unit">€</span>
+          </div>
+          <div class="field">
+            <label for="sn_tx_sal">Cotisations salariales <span class="hint">part salarié (indicatif)</span></label>
+            <input id="sn_tx_sal" type="number" min="0" step="0.01" value="9.27" inputmode="decimal"><span class="unit">%</span>
+          </div>
+          <div class="field">
+            <label for="sn_tx_pat">Cotisations patronales <span class="hint">part employeur (indicatif)</span></label>
+            <input id="sn_tx_pat" type="number" min="0" step="0.01" value="18.47" inputmode="decimal"><span class="unit">%</span>
+          </div>
+        </div>
+        <div class="calc-result">
+          <div id="sn_out"><p class="result-empty">Saisissez le salaire brut.</p></div>
+          <div class="disclaimer"><b>Estimation :</b> les taux sont indicatifs (particulier employeur / Pajemploi). Ils varient selon l'option choisie (réel, forfait, ou déduction forcée). Confirmez avant usage réel.</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="panel">
+      <h2>Comment ça se calcule</h2>
+      <div class="formula">Net = Brut × (1 − taux_salarial÷100)
+Coût employeur = Brut × (1 + taux_patronal÷100)</div>
+      <p>Pour le particulier employeur, plusieurs modes existent (réel, forfait, déduction simplifiée). Les taux par défaut sont indicatifs ; ajustez-les selon votre situation réelle ou l'option Pajemploi retenue.</p>
+    </section>
+
+    <section class="faq">
+      <h2 class="section-title">Questions fréquentes</h2>
+      <details open><summary>Quel est le taux de cotisations pour une nounou ?</summary><p>En mode « réel », la part salariale tourne autour de 9 à 10 % et la part employeur autour de 18 à 20 %. Les modes forfaitaires donnent des montants fixes : vérifiez sur le site Pajemploi.</p></details>
+      <details><summary>Ce calcul inclut-il les majorations d'heures complémentaires ?</summary><p>Il porte sur le brut que vous saisissez. Si vous appliquez déjà les majorations (heures > 35 h/sem) dans le brut, le résultat les intègre. Sinon, calculez le brut majoré avant de saisir.</p></details>
+    </section>
+
+    <div class="hook">
+      <p>📩 Modèle de bulletin de paie nounou (PDF) — gratuit.</p>
+      <a class="btn" href="../guides/comment-calculer-cp-nounou.html#pdf">Recevoir le modèle</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <span>© <span id="y">2026</span> CalculRH Famille</span>
+      <span><a href="../mentions-legales.html">Mentions légales</a> · <a href="../guides/comment-calculer-cp-nounou.html">Guide CP nounou</a></span>
+      <span class="disc">Outil d'information gratuit — estimation indicative, non conseil comptable. Taux à confirmer auprès de Pajemploi / Urssaf.</span>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Quel est le taux de cotisations pour une nounou ?","acceptedAnswer":{"@type":"Answer","text":"En mode réel, la part salariale tourne autour de 9 à 10 % et la part employeur autour de 18 à 20 %. Les modes forfaitaires donnent des montants fixes."}},
+      {"@type":"Question","name":"Ce calcul inclut-il les majorations d'heures complémentaires ?","acceptedAnswer":{"@type":"Answer","text":"Il porte sur le brut saisi. Si vous appliquez les majorations dans le brut, le résultat les intègre."}}
+    ]
+  }
+  </script>
+  <script src="../assets/js/calc.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculateur indemnité de fin de contrat CDD (assistante maternelle) — prime de précarité</title>
+  <meta name="description" content="Calculez la prime de précarité (indemnité de fin de contrat CDD) d'une assistante maternelle : 1/10 de la rémunération brute. Gère le CDD de remplacement exonéré. Formule et article L1243-8.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="canonical" href="https://calculrh.com/calculateurs/indemnite-fin-de-contrat-assmat">
+</head>
+<body>
+  <a class="skip" href="#main">Aller au contenu</a>
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="../index.html"><span class="dot"></span> CalculRH&nbsp;Famille <small>pour particulier employeur</small></a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <nav class="nav">
+        <a href="../index.html">Accueil</a>
+        <a href="../index.html#calculateurs">Calculateurs</a>
+        <a href="../guides/comment-calculer-cp-nounou.html">Guides</a>
+        <a href="../mentions-legales.html">Mentions légales</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <nav class="crumbs"><a href="../index.html">Accueil</a> › <a href="../index.html#calculateurs">Calculateurs</a> › Indemnité fin de contrat</nav>
+
+    <section class="hero">
+      <div class="badges">
+        <span class="badge">✓ CDD de remplacement géré</span>
+        <span class="badge blue">✓ Base légale citée</span>
+        <span class="badge amber">Mis à jour 2026-09</span>
+      </div>
+      <h1>Calculateur d'indemnité de fin de contrat (CDD)</h1>
+      <p class="lead">Prime de précarité égale à 1/10 de la rémunération brute totale versée sur le contrat. Exonérée pour un CDD de remplacement.</p>
+    </section>
+
+    <div class="calc">
+      <div class="calc-head"><h2>💶 Prime de précarité (CDD)</h2></div>
+      <div class="calc-body">
+        <div class="calc-inputs">
+          <div class="field">
+            <label for="ifdc_brut">Rémunération brute totale du contrat</label>
+            <input id="ifdc_brut" type="number" min="0" step="0.01" placeholder="ex. 8500" inputmode="decimal"><span class="unit">€</span>
+          </div>
+          <div class="field">
+            <label for="ifdc_remplacement"><input id="ifdc_remplacement" type="checkbox" style="width:auto;margin-right:8px"> CDD de remplacement (substitution) ?</label>
+            <span class="hint">Les CDD de remplacement sont exonérés de prime de précarité (art. L1243-8).</span>
+          </div>
+        </div>
+        <div class="calc-result">
+          <div id="ifdc_out"><p class="result-empty">Saisissez la rémunération brute totale.</p></div>
+          <div class="disclaimer"><b>Info :</b> la prime de précarité n'est pas due dans plusieurs cas (CDD de remplacement, contrat saisonnier, rupture anticipée pour faute…). Vérifiez auprès de votre organisme.</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="panel">
+      <h2>Comment ça se calcule</h2>
+      <div class="formula">Prime = rémunération_brute_totale ÷ 10   — art. L1243-8</div>
+      <p>La prime de précarité est due sauf exceptions (CDD de remplacement, contrat saisonnier, rupture pour faute grave, démission, ou embauche en CDI à l'issue du CDD).</p>
+      <p class="legal-ref">Source : <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901564/" target="_blank" rel="noopener">Art. L1243-8 du Code du travail</a></p>
+    </section>
+
+    <section class="faq">
+      <h2 class="section-title">Questions fréquentes</h2>
+      <details open><summary>La prime de précarité est-elle due pour une nounou en CDD ?</summary><p>Oui, sauf si le CDD est un CDD de remplacement, saisonnier, ou rompu pour faute grave / démission / embauche en CDI. Montant : 1/10 du brut total.</p></details>
+      <details><summary>Le CDD de remplacement est-il exonéré ?</summary><p>Oui, l'article L1243-8 exonère la prime de précarité pour les contrats de remplacement.</p></details>
+    </section>
+
+    <div class="hook">
+      <p>📩 Modèle de fin de contrat (PDF) à remettre à l'assistante maternelle — gratuit.</p>
+      <a class="btn" href="../guides/comment-calculer-cp-nounou.html#pdf">Recevoir le modèle</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <span>© <span id="y">2026</span> CalculRH Famille</span>
+      <span><a href="../mentions-legales.html">Mentions légales</a> · <a href="../guides/comment-calculer-cp-nounou.html">Guide CP nounou</a></span>
+      <span class="disc">Outil d'information gratuit — résultats indicatifs, non conseil juridique. Confirmez auprès de Pajemploi / Urssaf.</span>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"La prime de précarité est-elle due pour une nounou en CDD ?","acceptedAnswer":{"@type":"Answer","text":"Oui sauf CDD de remplacement, saisonnier, ou rupture pour faute grave, démission ou embauche en CDI. Montant : 1/10 du brut total."}},
+      {"@type":"Question","name":"Le CDD de remplacement est-il exonéré ?","acceptedAnswer":{"@type":"Answer","text":"Oui, l'article L1243-8 exonère la prime de précarité pour les contrats de remplacement."}}
+    ]
+  }
+  </script>
+  <script src="../assets/js/calc.js"></script>
+</body>
+</html>

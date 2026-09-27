@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculateur jours de congés payés acquis — 2,5 j par mois (plafond 30)</title>
+  <meta name="description" content="Combien de jours de congés payés avez-vous acquis ? 2,5 jours par mois travaillé, plafond 30 jours par période de référence. Outil gratuit et instantané.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="canonical" href="https://calculrh.com/calculateurs/jours-cp-acquis">
+</head>
+<body>
+  <a class="skip" href="#main">Aller au contenu</a>
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="../index.html"><span class="dot"></span> CalculRH&nbsp;Famille <small>pour particulier employeur</small></a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <nav class="nav">
+        <a href="../index.html">Accueil</a>
+        <a href="../index.html#calculateurs">Calculateurs</a>
+        <a href="../guides/comment-calculer-cp-nounou.html">Guides</a>
+        <a href="../mentions-legales.html">Mentions légales</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <nav class="crumbs"><a href="../index.html">Accueil</a> › <a href="../index.html#calculateurs">Calculateurs</a> › Jours de CP acquis</nav>
+
+    <section class="hero">
+      <div class="badges">
+        <span class="badge">✓ Instantané</span>
+        <span class="badge blue">✓ Base légale citée</span>
+        <span class="badge amber">Mis à jour 2026-09</span>
+      </div>
+      <h1>Calculateur de jours de congés payés acquis</h1>
+      <p class="lead">2,5 jours ouvrables par mois travaillé, dans la limite de 30 jours par période de référence (1 juin → 31 mai).</p>
+    </section>
+
+    <div class="calc">
+      <div class="calc-head"><h2>⚡ Jours de CP acquis</h2></div>
+      <div class="calc-body">
+        <div class="calc-inputs">
+          <div class="field">
+            <label for="jc_mois">Mois travaillés <span class="hint">sur la période de référence</span></label>
+            <input id="jc_mois" type="number" min="0" max="12" step="0.5" placeholder="ex. 12" inputmode="decimal">
+          </div>
+        </div>
+        <div class="calc-result">
+          <div id="jc_out"><p class="result-empty">Saisissez le nombre de mois.</p></div>
+          <div class="disclaimer"><b>Info :</b> en temps partiel, l'acquisition est identique (2,5 j/mois). Pour le bonus de fractionnement et l'indemnité, voir <a href="congres-payes-assmat.html">congés payés assistante maternelle</a>.</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="panel">
+      <h2>Comment ça se calcule</h2>
+      <div class="formula">Jours_CP = min( 2,5 × mois_travaillés , 30 )   — art. L3141-1</div>
+      <p>La période de référence court du 1ᵉʳ juin au 31 mai de l'année suivante. Au-delà de 12 mois, le plafond de 30 jours s'applique.</p>
+      <p class="legal-ref">Source : <a href="https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000006150381/" target="_blank" rel="noopener">Art. L3141-1 du Code du travail</a></p>
+    </section>
+
+    <section class="faq">
+      <h2 class="section-title">Questions fréquentes</h2>
+      <details open><summary>Quelle est la période de référence des congés payés ?</summary><p>Du 1ᵉʳ juin au 31 mai suivant. Les droits acquis sur cette période sont pris entre le 1ᵉʳ mai et le 31 octobre de l'année en cours.</p></details>
+      <details><summary>Peut-on dépasser 30 jours ?</summary><p>Non : 30 jours ouvrables (soit 5 semaines) est le plafond légal d'acquisition par période de référence.</p></details>
+    </section>
+
+    <div class="hook">
+      <p>📩 Bulletin de paie nounou (PDF) — modèle gratuit.</p>
+      <a class="btn" href="../guides/comment-calculer-cp-nounou.html#pdf">Recevoir le modèle</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <span>© <span id="y">2026</span> CalculRH Famille</span>
+      <span><a href="../mentions-legales.html">Mentions légales</a> · <a href="../guides/comment-calculer-cp-nounou.html">Guide CP nounou</a></span>
+      <span class="disc">Outil d'information gratuit — résultats indicatifs, non conseil juridique.</span>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Quelle est la période de référence des congés payés ?","acceptedAnswer":{"@type":"Answer","text":"Du 1er juin au 31 mai suivant. Les droits sont pris entre le 1er mai et le 31 octobre."}},
+      {"@type":"Question","name":"Peut-on dépasser 30 jours ?","acceptedAnswer":{"@type":"Answer","text":"Non : 30 jours ouvrables (5 semaines) est le plafond légal par période de référence."}}
+    ]
+  }
+  </script>
+  <script src="../assets/js/calc.js"></script>
+</body>
+</html>
